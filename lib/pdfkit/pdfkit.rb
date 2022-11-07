@@ -76,7 +76,7 @@ class PDFKit
 
     # $? is thread safe per
     # http://stackoverflow.com/questions/2164887/thread-safe-external-process-in-ruby-plus-checking-exitstatus
-    raise ImproperWkhtmltopdfExitStatus, invoke if empty_result?(path, result) || !successful?($?)
+    raise ImproperWkhtmltopdfExitStatus, invoke if empty_result?(path, result)
     return result
   end
 
